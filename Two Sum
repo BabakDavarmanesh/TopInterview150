@@ -25,18 +25,12 @@ class Solution(object):
         num_index = {}
 
         for i, num in enumerate(nums):
-            complement = target - num
-            print('i:',i)
-            print('complement:',complement)
-            print('num_index:',num_index)
+            complement = target - num       
 
-            if complement in num_index:
-                print('num_index[complement]:',num_index[complement])
+            if complement in num_index:             
                 return [num_index[complement], i]
 
-            num_index[num] = i
-            print('num_index::',num_index)
-            print("------------------------------")
+            num_index[num] = i     
 
         return []
 
